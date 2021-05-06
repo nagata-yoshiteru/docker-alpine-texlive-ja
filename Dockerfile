@@ -30,7 +30,7 @@
 FROM paperist/alpine-texlive-ja
 
 RUN wget http://tug.ctan.org/tex-archive/macros/latex/contrib/algorithms.zip && unzip algorithms.zip && \
-    cp algorithms /usr/local/texlive/texmf-local/tex/platex/algorithms && \
+    cp -R algorithms /usr/local/texlive/texmf-local/tex/platex/algorithms && \
     cd /usr/local/texlive/texmf-local/tex/platex/algorithms && platex algorithms.ins && mktexlsr
 
 WORKDIR /workdir
