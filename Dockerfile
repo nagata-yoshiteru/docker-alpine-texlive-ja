@@ -27,6 +27,12 @@ RUN apk add --no-cache curl perl fontconfig-dev freetype-dev && \
     rm -fr /tmp/install-tl-unx && \
     apk del .fetch-deps
 
+RUN wget http://tug.ctan.org/tex-archive/macros/latex/contrib/algorithms.zip && unzip algorithms.zip
+
+COPY algorithms /usr/local/texlive/texmf-local/tex/platex/algorithms
+
+RUN cd /usr/local/texlive/texmf-local/tex/platex/algorithms && platex algorithms.ins && mktexlsr
+
 WORKDIR /workdir
 
 CMD ["sh"]
