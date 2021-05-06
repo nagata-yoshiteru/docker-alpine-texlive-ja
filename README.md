@@ -6,7 +6,7 @@
 
 > Minimal TeX Live image for Japanese based on alpine with algorithms
 
-Forked from [Paperist/docker-alpine-texlive-ja](/Paperist/docker-alpine-texlive-ja) \(under the MIT License\).
+Forked from [Paperist/docker-alpine-texlive-ja](https://github.com/paperist/docker-alpine-texlive-ja) \(under the MIT License\).
 
 [umireon/docker-texci]: https://github.com/umireon/docker-texci
 
@@ -20,13 +20,13 @@ Forked from [Paperist/docker-alpine-texlive-ja](/Paperist/docker-alpine-texlive-
 ## Install
 
 ```bash
-docker pull paperist/alpine-texlive-ja
+docker pull ngtystr/alpine-texlive-ja
 ```
 
 ## Usage
 
 ```bash
-$ docker run --rm -it -v $PWD:/workdir paperist/alpine-texlive-ja
+$ docker run --rm -it -v $PWD:/workdir ngtystr/alpine-texlive-ja
 $ latexmk -C main.tex && latexmk main.tex && latexmk -c main.tex
 ```
 
