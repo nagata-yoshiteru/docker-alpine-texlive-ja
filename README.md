@@ -6,7 +6,7 @@
 
 > Minimal TeX Live image for Japanese based on alpine with algorithms
 
-Forked from [/Paperist/docker-alpine-texlive-ja] \(under the MIT License\).
+Forked from [Paperist/docker-alpine-texlive-ja](/Paperist/docker-alpine-texlive-ja) \(under the MIT License\).
 
 [umireon/docker-texci]: https://github.com/umireon/docker-texci
 
