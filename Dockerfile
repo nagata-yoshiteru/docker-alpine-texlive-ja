@@ -29,11 +29,9 @@
 
 FROM paperist/alpine-texlive-ja
 
-RUN wget http://tug.ctan.org/tex-archive/macros/latex/contrib/algorithms.zip && unzip algorithms.zip
-
-COPY algorithms /usr/local/texlive/texmf-local/tex/platex/algorithms
-
-RUN cd /usr/local/texlive/texmf-local/tex/platex/algorithms && platex algorithms.ins && mktexlsr
+RUN wget http://tug.ctan.org/tex-archive/macros/latex/contrib/algorithms.zip && unzip algorithms.zip && \
+    cp algorithms /usr/local/texlive/texmf-local/tex/platex/algorithms && \
+    cd /usr/local/texlive/texmf-local/tex/platex/algorithms && platex algorithms.ins && mktexlsr
 
 WORKDIR /workdir
 
