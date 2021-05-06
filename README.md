@@ -1,4 +1,4 @@
-# paperist/alpine-texlive-ja
+# ngtystr/alpine-texlive-ja
 
 [![Docker Automated build](https://img.shields.io/docker/automated/ngtystr/alpine-texlive-ja.svg)](https://hub.docker.com/r/ngtystr/alpine-texlive-ja/)
 [![Docker Image Size](https://images.microbadger.com/badges/image/ngtystr/alpine-texlive-ja.svg)](https://microbadger.com/images/ngtystr/alpine-texlive-ja "Get your own image badge on microbadger.com")
@@ -36,7 +36,7 @@ PRs accepted.
 
 ## License
 
-MIT © 3846masa
+MIT © ngtystr
 
 
 
