@@ -37,6 +37,3 @@ PRs accepted.
 ## License
 
 MIT © ngtystr
-
-
-
