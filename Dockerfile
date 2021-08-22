@@ -34,6 +34,10 @@ RUN wget http://tug.ctan.org/tex-archive/macros/latex/contrib/algorithms.zip && 
     cp -R algorithms /usr/local/texlive/texmf-local/tex/platex/ && \
     cd /usr/local/texlive/texmf-local/tex/platex/algorithms && platex algorithms.ins && mktexlsr
 
+RUN wget https://ftp.jaist.ac.jp/pub/CTAN/fonts/sourcecodepro.zip && unzip sourcecodepro.zip && \
+    cp -R sourcecodepro /usr/local/texlive/texmf-local/tex/platex/ && \
+    cd /usr/local/texlive/texmf-local/tex/platex/sourcecodepro && mktexlsr
+
 WORKDIR /workdir
 
 # CMD ["sh"]
