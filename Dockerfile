@@ -22,16 +22,13 @@ RUN apk add --no-cache curl perl fontconfig-dev freetype-dev && \
     tlmgr install \
       collection-latexextra \
       collection-fontsrecommended \
+      collection-fontsextra \
+      collection-fontutils \
       collection-langjapanese \
-      sourcecodepro \
+      collection-mathscience \
       latexmk && \
     rm -fr /tmp/install-tl-unx && \
     apk del .fetch-deps
-
-RUN wget http://tug.ctan.org/tex-archive/macros/latex/contrib/algorithms.zip && unzip algorithms.zip && \
-    mkdir -p /usr/local/texlive/texmf-local/tex/platex && \
-    cp -R algorithms /usr/local/texlive/texmf-local/tex/platex/ && \
-    cd /usr/local/texlive/texmf-local/tex/platex/algorithms && platex algorithms.ins && mktexlsr
 
 WORKDIR /workdir
 
