@@ -13,9 +13,11 @@ RUN apk add --no-cache curl perl fontconfig-dev freetype-dev && \
     curl -L ftp://tug.org/historic/systems/texlive/2021/install-tl-unx.tar.gz | \
       tar -xz -C /tmp/install-tl-unx --strip-components=1 && \
     printf "%s\n" \
-      "selected_scheme scheme-basic" \
+      "selected_scheme scheme-full" \
       "tlpdbopt_install_docfiles 0" \
       "tlpdbopt_install_srcfiles 0" \
+      "option_doc 0" \
+      "option_src 0" \
       > /tmp/install-tl-unx/texlive.profile && \
     /tmp/install-tl-unx/install-tl \
       --profile=/tmp/install-tl-unx/texlive.profile && \
